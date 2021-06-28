@@ -5,6 +5,10 @@
     @include flexPosition(space-around);
     padding: 5rem 0;
     border-top: .1rem solid #000000;
+
+    @include response(lg) {
+        flex-wrap: wrap;
+    }
 }
 
 .footer-nav {
@@ -16,10 +20,21 @@
 }
 
 .contact {
+
+    @include response(lg) {
+        padding: 0 10rem;
+        order: 1;
+        margin-top: 4rem;
+    }
+
     &-heading {
         font-size: size(xl);
         text-align: center;
         color: color(primary);
+
+        @include response(md) {
+            font-size: size(lg);
+        }
     }
 
     
@@ -30,10 +45,15 @@
     color: color(secondary);
     margin: 1rem 0;
     text-align: center;
+
+    @include response(md) {
+        font-size: size(sm);
+    }
 }
 
 .inputs-group {
     display: flex;
+    justify-content: center;
 
     input {
         padding: .3rem;
